@@ -2,6 +2,7 @@
   "name": "data-updater",
   "version": "0.0.1",
   "main": "dist/main.js",
+  "type": "module",
   "description": "",
   "scripts": {
     "build": "nest build",
