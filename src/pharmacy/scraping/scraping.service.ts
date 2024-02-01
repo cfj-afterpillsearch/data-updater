@@ -1,12 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
-import { fileURLToPath } from 'node:url';
-import path from 'node:path';
-import prefectures from './prefectureCodes.json' assert { type: 'json' };
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import prefectures from './prefectureCodes.json';
 
 const mkdirRecursiveSync = (path: string) => {
   if (!fs.existsSync(path)) {
@@ -34,7 +29,6 @@ const getFilenameFromUrl = (excelUrl) => {
 
 const main = async () => {
   const mhlwPharmacyUrl = 'https://www.mhlw.go.jp/stf/kinnkyuuhininnyaku.html';
-
   const dom = await JSDOM.fromURL(mhlwPharmacyUrl);
   const document = dom.window.document;
   const domList = document.body.querySelectorAll<HTMLAnchorElement>(

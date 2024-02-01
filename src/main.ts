@@ -1,8 +1,8 @@
 import { NestFactory } from '@nestjs/core';
-import { PharmacyModule as PH } from './pharmacy/pharmacy.module.js';
-import { MedicalInstitutionModule as MI } from './medicalinstitution/medicalinstitution.module.js';
-import { ScrapingService as PH_ScrapingService } from './pharmacy/scraping/scraping.service.js';
-import { ScrapingService as MI_ScrapingService } from './medicalinstitution/scraping/scraping.service.js';
+import { PharmacyModule as PH } from './pharmacy/pharmacy.module';
+import { MedicalInstitutionModule as MI } from './medicalinstitution/medicalinstitution.module';
+import { ScrapingService as PH_ScrapingService } from './pharmacy/scraping/scraping.service';
+import { ScrapingService as MI_ScrapingService } from './medicalinstitution/scraping/scraping.service';
 
 import * as ff from '@google-cloud/functions-framework';
 
